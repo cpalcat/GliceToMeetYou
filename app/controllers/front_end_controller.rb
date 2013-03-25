@@ -1,6 +1,6 @@
 class FrontEndController < ApplicationController
   
-before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
   def index
     
@@ -8,4 +8,5 @@ before_filter :authenticate_user!
       format.html # index.html.erb
     end
   end
+
 end

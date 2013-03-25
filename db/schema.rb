@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320214912) do
+ActiveRecord::Schema.define(:version => 20130321003543) do
 
   create_table "customers", :force => true do |t|
     t.string   "first"
     t.string   "last"
     t.string   "phone"
     t.string   "cell"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "vehicle"
+  end
+
+  create_table "invoices", :force => true do |t|
+    t.decimal  "subtotal"
+    t.decimal  "tax"
+    t.decimal  "due"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -39,5 +48,14 @@ ActiveRecord::Schema.define(:version => 20130320214912) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "vehicles", :force => true do |t|
+    t.string   "make"
+    t.string   "model"
+    t.integer  "year"
+    t.integer  "km"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

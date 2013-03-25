@@ -1,3 +1,35 @@
 // Place all the styles related to the front_end controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	background: black;
+
+}
+
+.header{
+	text-align: center;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+	border: 1px solid black;
+	border-radius: 5px;
+	background:black;
+	text-shadow: 2px 2px #ff0000;
+
+}
+
+.catimg{
+	margin-top: 50px;
+	margin-left: 100px;
+	padding: 50px;
+	width: 50%;
+
+	background: black;
+	border-radius: 10px;
+}
+
+.text{
+	float:right;
+	color: white;
+}

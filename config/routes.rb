@@ -1,9 +1,24 @@
 Auto::Application.routes.draw do
-  devise_for :users
+  
+  resources :vehicle_models
 
-  resources :customers
+
+  resources :vehicle_makes
+
+
+  resources :invoices, :vehicles, :customers
+
+  devise_for :users
   
   root :to => 'front_end#index'
+
+
+## Invoice Route
+  match 'CreateInvoice' => 'invoices#invoice', :as => 'invoice', :controller => 'invoices', :via => :get
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

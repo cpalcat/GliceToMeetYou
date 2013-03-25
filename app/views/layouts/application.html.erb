@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>Auto</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel='stylesheet' type='text/css' href='css/style.css' />
+  <link rel='stylesheet' type='text/css' href='../printstyles/css/print.css' media="print" />
+  <script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+  <script type='text/javascript' src='js/example.js'></script>
 </head>
 <body>
 
-<%= yield %>
+	<%= link_to "Create Invoice", :controller => 'invoices', :action => 'invoice' %>
+	<%= link_to "Customers", :controller => 'customers', :action => 'index' %>
+	<%= link_to "Customer Vehicles", :controller => 'vehicles', :action => 'index' %>
+  <%= link_to "Home", root_url %>
+
+	<%= yield %>
 
 </body>
 </html>

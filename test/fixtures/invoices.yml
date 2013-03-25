@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subtotal: 9.99
+  tax: 9.99
+  due: 9.99
+
+two:
+  subtotal: 9.99
+  tax: 9.99
+  due: 9.99

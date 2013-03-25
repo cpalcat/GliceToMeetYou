@@ -1,0 +1,25 @@
+<%= form_for(@vehicle_model) do |f| %>
+  <% if @vehicle_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vehicle_model.errors.count, "error") %> prohibited this vehicle_model from being saved:</h2>
+
+      <ul>
+      <% @vehicle_model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :make_id %><br />
+    <%= f.select :make_id, VehicleMake.all.collect { |v| [v.make, v.make] } , :selected => "Ford" %>
+  </div>  
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,13 +1,17 @@
 <h1>Listing customers</h1>
 
+<br/ ><br />
+
+<%= link_to "Add A New Customer", new_customer_path %>
+
 <table>
   <tr>
     <th>First</th>
     <th>Last</th>
     <th>Phone</th>
     <th>Cell</th>
-    <th></th>
-    <th></th>
+    <th>Vehicle Make</th>
+    <th>Vehicle Model</th>
     <th></th>
   </tr>
 
@@ -17,6 +21,7 @@
     <td><%= customer.last %></td>
     <td><%= customer.phone %></td>
     <td><%= customer.cell %></td>
+    <td><%= customer.vehicle %></td>
     <td><%= link_to 'Show', customer %></td>
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
     <td><%= link_to 'Remove', customer, confirm: 'Are you sure?', method: :delete %></td>
@@ -26,4 +31,3 @@
 
 <br />
 
-<%= link_to 'Add New Customer', new_customer_path %>
